@@ -1,0 +1,7 @@
+Assignment #8
+
+[{2}/2] Presentation and Style.
+
+[{16}/16] Correctness.
+
+[{2}/2] Documentation.
