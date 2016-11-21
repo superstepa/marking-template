@@ -1,1 +1,1 @@
-This script allows you to dynamically input feedback and marks for assignments. After the template is filled out, the total mark is calculated, the result is saved to a file, and then copied to the clipboard.
+This script allows you to dynamically input feedback and marks for assignments. After the template is filled out, the total grade is calculated, the result is saved to a file, and then copied to the clipboard.

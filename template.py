@@ -56,15 +56,16 @@ class TemplateGenerator():
 
         with PyClipboard() as clipboard:
             while(running):
-                # call cls on windows, clear on unix
-                os.system('cls' if os.name == 'nt' else 'clear')
-                result = self.interactive_template()
-                clipboard.clear_clipboard()
-                clipboard.copy_to_clipboard(result)
-                with open(self.output, "w") as f:
-                    f.write(result)
-                user_input = input("Continue? (Y/N)\n>")
-                running = user_input[0].lower() == 'y' if user_input else False
+                try:
+                    # call cls on windows, clear on unix
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    result = self.interactive_template()
+                    clipboard.clear_clipboard()
+                    clipboard.copy_to_clipboard(result)
+                    with open(self.output, "w") as f:
+                        f.write(result)
+                except KeyboardInterrupt as e:
+                    break
 
 if __name__ == "__main__":
     import argparse
